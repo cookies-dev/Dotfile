@@ -71,11 +71,13 @@ alias -g C="| cat"
 alias -g S="| sort"
 alias -g R="| uniq"
 alias -g P="| grep -i"
-alias epi="gh repo list EpitechPromo2026 -L 200 | grep "
+# alias epi="gh repo list EpitechPromo2026 -L 200 | grep "
 alias cat="batcat --paging=never"
 alias cato="/bin/cat"
-alias style="coding-style.sh . . && cat coding-style-reports.log && rm -f coding-style-reports.log"
-alias clone="~/.clone.sh"
+# alias style="coding-style.sh . . && cat coding-style-reports.log && rm -f coding-style-reports.log"
+# alias clone="~/.clone.sh"
+alias sudo='sudo '
+alias u='sudo '
 
 autoload -U add-zsh-hook
 load-nvmrc() {
