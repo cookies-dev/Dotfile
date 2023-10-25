@@ -2,7 +2,10 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt-get install zsh keychain bat -y
+sudo apt-get install zsh keychain bat python3-dev python3-pip python3-setuptools -y
+
+# the fuck
+pip3 install thefuck --user
 
 # zplug
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
