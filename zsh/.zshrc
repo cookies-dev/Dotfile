@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export WIN_HOME="/mnt/c/Users/theyk"
 export ZSH="/home/maxim/.oh-my-zsh"
 export NVM_DIR="$HOME/.nvm"
 export MANPATH=$HOME/tools/ripgrep/doc/man:$MANPATH
@@ -77,7 +76,6 @@ alias cat="bat --paging=never"
 alias cato="/bin/cat"
 alias style="coding-style.sh . . && cat coding-style-reports.log && rm -f coding-style-reports.log"
 alias clone="~/.clone.sh"
-alias code="/mnt/c/Users/theyk/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/bin/code"
 
 autoload -U add-zsh-hook
 load-nvmrc() {
