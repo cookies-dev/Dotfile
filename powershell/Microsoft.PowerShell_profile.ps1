@@ -1,4 +1,4 @@
-$USERPROFILE =  $env:USERPROFILE
+$USERPROFILE = $env:USERPROFILE
 # Import-Module PSProfiler
 # Measure-Script {
 (@(& "$USERPROFILE/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe" init pwsh --config="$USERPROFILE\Documents\Dotfile\powershell\.maxim-theme.omp.json" --print) -join "`n") | Invoke-Expression
@@ -244,6 +244,21 @@ function key {	ssh-add C:\Users\theyk\.ssh\id_rsa_git }
 
 #     Invoke-Expression "netsh interface portproxy show v4tov4";
 # }
+function Forward {
+    param (
+        [string]$Server,
+        [int]$Port = 22,
+        [int[]]$ForwardPorts
+    )
+
+    $sshCommand = "ssh $Server -p $Port"
+    foreach ($forwardPort in $ForwardPorts) {
+        $sshCommand += "  -L $forwardPort" + ":localhost:" + "$forwardPort"
+    }
+
+    Write-Host "Executing command: $sshCommand"
+    Invoke-Expression $sshCommand
+}
 function du {
     Get-ChildItem . |
     ForEach-Object { $f = $_; Get-ChildItem -r $_.FullName |
