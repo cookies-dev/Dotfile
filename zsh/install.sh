@@ -16,7 +16,7 @@ echo \
 # install zsh, keychain, batcat, python3, docker (cli, compose, plugin)
 sudo apt update
 sudo apt upgrade
-sudo apt-get install nala zsh keychain bat python3-dev python3-pip python3-setuptools -y
+sudo apt-get install nala zsh keychain bat python3-dev python3-pip python3-setuptools gh -y
 # sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo nala fetch
 # docker group & permission
