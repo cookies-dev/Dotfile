@@ -16,12 +16,13 @@ echo \
 # install zsh, keychain, batcat, python3, docker (cli, compose, plugin)
 sudo apt update
 sudo apt upgrade
-sudo apt-get install zsh keychain bat python3-dev python3-pip python3-setuptools docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo apt-get install zsh keychain bat python3-dev python3-pip python3-setuptools -y
+# sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # docker group & permission
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# newgrp docker
 
 # the fuck
 pip3 install thefuck --user
