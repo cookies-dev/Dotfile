@@ -78,6 +78,8 @@ alias cato="/bin/cat"
 # alias clone="~/.clone.sh"
 alias sudo='sudo '
 alias u='sudo '
+alias '??'='gh copilot explain'
+alias '?!'='gh copilot suggest'
 
 autoload -U add-zsh-hook
 load-nvmrc() {
