@@ -16,9 +16,9 @@ echo \
 # install zsh, keychain, batcat, python3, docker (cli, compose, plugin)
 sudo apt update
 sudo apt upgrade
-sudo apt-get install zsh keychain bat python3-dev python3-pip python3-setuptools -y
+sudo apt-get install nala zsh keychain bat python3-dev python3-pip python3-setuptools -y
 # sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+sudo nala fetch
 # docker group & permission
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
@@ -31,9 +31,10 @@ pip3 install thefuck --user
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-nvm install node
-nvm use node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+node -v
 
 # atuin
 bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
