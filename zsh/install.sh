@@ -44,4 +44,6 @@ curl https://raw.githubusercontent.com/cookies-dev/Dotfile/main/zsh/.p10k.zsh -o
 curl https://raw.githubusercontent.com/cookies-dev/Dotfile/main/zsh/.zshrc -o ~/.zshrc
 
 # install ohmyzsh
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
